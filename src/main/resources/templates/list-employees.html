@@ -13,25 +13,27 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <h3 class="text-light">Employee Directory</h3>
-    <hr class="bg-light">
-    <table class="table table-dark table-bordered table-striped">
-        <thead class="">
-        <tr>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="employee : ${employees}">
-            <td th:text="${employee.firstName} "></td>
-            <td th:text="${employee.lastName} "></td>
-            <td th:text="${employee.email} "></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="container">
+        <h3 class="text-light">Employee Directory</h3>
+        <hr class="bg-light">
+        <table class="table table-dark table-bordered table-striped">
+            <thead class="">
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.firstName} "></td>
+                <td th:text="${employee.lastName} "></td>
+                <td th:text="${employee.email} "></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a th:href="@{/employees/add}" class="btn btn-success">Add employee</a>
+    </div>
 </body>
 </html>
